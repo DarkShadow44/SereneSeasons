@@ -4,11 +4,13 @@
     "target": "@env(DEFAULT)",
     "minVersion": "0.7",
     "compatibilityLevel": "JAVA_8",
+    "plugin": "sereneseasons.MixinPlugin",
     "mixins": [
         "WorldMixin",
         "BiomeMixin",
         "BlockMixin",
         "ColorizerGrassMixin",
-        "ColorizerFoliageMixin"
+        "ColorizerFoliageMixin",
+        "OptifineMixin"
   ]
 }
