@@ -13,3 +13,11 @@ tile.season_sensor_winter.name=Sensor de estações do ano
 item.ss_icon.name=Ícone do SS
 
 item.season_clock.name=Relógio de estações do ano
+
+desc.sereneseasons.fertile_seasons=Estações férteis:
+
+desc.sereneseasons.year_round=Ano inteiro
+desc.sereneseasons.spring=Primavera
+desc.sereneseasons.summer=Verão
+desc.sereneseasons.autumn=Outono
+desc.sereneseasons.winter=Inverno
