@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.IPlantable;
@@ -221,29 +222,34 @@ public class ModFertility
             {
                 int mask = seedSeasons.get(name);
 
-                event.toolTip.add("Fertile Seasons:");
+                String fertileSeasons = StatCollector.translateToLocal("desc.sereneseasons.fertile_seasons");
+                event.toolTip.add(fertileSeasons);
 
                 if ((mask & 1) != 0 && (mask & 2) != 0 && (mask & 4) != 0 && (mask & 8) != 0)
                 {
-                    event.toolTip.add(EnumChatFormatting.LIGHT_PURPLE + " Year-Round");
+                    event.toolTip.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("desc.sereneseasons.year_round"));
+
                 }
                 else
                 {
                     if ((mask & 1) != 0)
                     {
-                        event.toolTip.add(EnumChatFormatting.GREEN + " Spring");
+                        event.toolTip.add(EnumChatFormatting.GREEN + StatCollector.translateToLocal("desc.sereneseasons.spring"));
                     }
+
                     if ((mask & 2) != 0)
                     {
-                        event.toolTip.add(EnumChatFormatting.YELLOW + " Summer");
+                        event.toolTip.add(EnumChatFormatting.YELLOW + StatCollector.translateToLocal("desc.sereneseasons.summer"));
                     }
+
                     if ((mask & 4) != 0)
                     {
-                        event.toolTip.add(EnumChatFormatting.GOLD + " Autumn");
+                        event.toolTip.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("desc.sereneseasons.autumn"));
                     }
+
                     if ((mask & 8) != 0)
                     {
-                        event.toolTip.add(EnumChatFormatting.AQUA + " Winter");
+                        event.toolTip.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("desc.sereneseasons.winter"));
                     }
                 }
             }
