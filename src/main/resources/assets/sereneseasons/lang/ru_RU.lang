@@ -1,7 +1,8 @@
-commands.sereneseasons.usage=/sereneseasons <setseason> [args]
-commands.sereneseasons.setseason.success=Установить сезон на %s
-commands.sereneseasons.setseason.fail=Неверный сезон %s
-commands.sereneseasons.setseason.disabled=Сезоны в настоящее время отключены!
+commands.sereneseasons.usage=/season <setseason> [аргументы]
+commands.sereneseasons.getseason.success=Текущий сезон - %s, день %s/%s, такт %s/%s
+commands.sereneseasons.setseason.success=Сезон установлен на %s.
+commands.sereneseasons.setseason.fail=Неверный сезон %s.
+commands.sereneseasons.setseason.disabled=В данный момент Сезоны отключены!
 
 itemGroup.tabSereneSeasons=Serene Seasons
 
@@ -10,6 +11,14 @@ tile.season_sensor_spring.name=Сезонный датчик
 tile.season_sensor_summer.name=Сезонный датчик
 tile.season_sensor_autumn.name=Сезонный датчик
 tile.season_sensor_winter.name=Сезонный датчик
-item.ss_icon.name=СС иконка
-
+item.ss_icon=Иконка SS
 item.season_clock.name=Сезонные часы
+
+
+desc.sereneseasons.fertile_seasons=Плодородные сезоны:
+
+desc.sereneseasons.year_round=Круглый год
+desc.sereneseasons.spring=Весна
+desc.sereneseasons.summer=Лето
+desc.sereneseasons.autumn=Осень
+desc.sereneseasons.winter=Зима

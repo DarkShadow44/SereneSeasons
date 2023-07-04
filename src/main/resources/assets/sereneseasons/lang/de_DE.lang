@@ -12,3 +12,12 @@ tile.season_sensor_winter.name=Jahreszeitensensor
 item.ss_icon.name=SS-Icon
 
 item.season_clock.name=Jahreszeitenuhr
+
+
+desc.sereneseasons.fertile_seasons=Fertile Jahreszeiten:
+
+desc.sereneseasons.year_round=Ganzjährig
+desc.sereneseasons.spring=Frühling
+desc.sereneseasons.summer=Sommer
+desc.sereneseasons.autumn=Herbst
+desc.sereneseasons.winter=Winter

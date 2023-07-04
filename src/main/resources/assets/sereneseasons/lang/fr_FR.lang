@@ -13,3 +13,11 @@ tile.season_sensor_winter.name=Capteur de saison
 item.ss_icon.name=Icône SS
 
 item.season_clock.name=Horloge de saison
+
+desc.sereneseasons.fertile_seasons=Saisons Fertiles:
+
+desc.sereneseasons.year_round=Toute l'Année
+desc.sereneseasons.spring=Printemps
+desc.sereneseasons.summer=Été
+desc.sereneseasons.autumn=Automne
+desc.sereneseasons.winter=Hiver

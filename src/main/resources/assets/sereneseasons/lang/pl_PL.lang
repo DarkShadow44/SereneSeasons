@@ -13,3 +13,11 @@ tile.season_sensor_winter.name=Zimowy Czujnik
 item.ss_icon.name=SS Icon
 
 item.season_clock.name=egar Pór Roku
+
+desc.sereneseasons.fertile_seasons=Urodzajne pory:
+
+desc.sereneseasons.year_round=Całorocznie
+desc.sereneseasons.spring=Wiosna
+desc.sereneseasons.summer=Lato
+desc.sereneseasons.autumn=Jesień
+desc.sereneseasons.winter=Zima
