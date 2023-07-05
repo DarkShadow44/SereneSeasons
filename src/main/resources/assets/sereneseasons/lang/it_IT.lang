@@ -6,10 +6,10 @@ commands.sereneseasons.setseason.disabled=Le stagioni sono attualmente disabilit
 itemGroup.tabSereneSeasons=Serene Seasons
 
 tile.greenhouse_glass.name=Vetro per Serra
-tile.season_sensor_spring.name=Sensore Stagionale
-tile.season_sensor_summer.name=Sensore Stagionale
-tile.season_sensor_autumn.name=Sensore Stagionale
-tile.season_sensor_winter.name=Sensore Stagionale
+tile.season_sensor_spring.name=Sensore Stagionale (Primavera)
+tile.season_sensor_summer.name=Sensore Stagionale (Estate)
+tile.season_sensor_autumn.name=Sensore Stagionale (Autunno)
+tile.season_sensor_winter.name=Sensore Stagionale (Inverno)
 item.ss_icon.name=Icona SS
 
 item.season_clock.name=Orologio Stagionale

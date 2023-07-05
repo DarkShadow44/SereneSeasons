@@ -5,10 +5,10 @@ commands.sereneseasons.setseason.disabled=Jahreszeiten sind aktuell deaktiviert!
 itemGroup.tabSereneSeasons=Serene Seasons
 
 tile.greenhouse_glass.name=Gewächshausglas
-tile.season_sensor_spring.name=Jahreszeitensensor
-tile.season_sensor_summer.name=Jahreszeitensensor
-tile.season_sensor_autumn.name=Jahreszeitensensor
-tile.season_sensor_winter.name=Jahreszeitensensor
+tile.season_sensor_spring.name=Jahreszeitensensor (Frühling)
+tile.season_sensor_summer.name=Jahreszeitensensor (Sommer)
+tile.season_sensor_autumn.name=Jahreszeitensensor (Herbst)
+tile.season_sensor_winter.name=Jahreszeitensensor (Winter)
 item.ss_icon.name=SS-Icon
 
 item.season_clock.name=Jahreszeitenuhr

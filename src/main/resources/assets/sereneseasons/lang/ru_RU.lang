@@ -1,5 +1,4 @@
 commands.sereneseasons.usage=/season <setseason> [аргументы]
-commands.sereneseasons.getseason.success=Текущий сезон - %s, день %s/%s, такт %s/%s
 commands.sereneseasons.setseason.success=Сезон установлен на %s.
 commands.sereneseasons.setseason.fail=Неверный сезон %s.
 commands.sereneseasons.setseason.disabled=В данный момент Сезоны отключены!
@@ -7,10 +6,10 @@ commands.sereneseasons.setseason.disabled=В данный момент Сезо�
 itemGroup.tabSereneSeasons=Serene Seasons
 
 tile.greenhouse_glass.name=Тепличное стекло
-tile.season_sensor_spring.name=Сезонный датчик
-tile.season_sensor_summer.name=Сезонный датчик
-tile.season_sensor_autumn.name=Сезонный датчик
-tile.season_sensor_winter.name=Сезонный датчик
+tile.season_sensor_spring.name=Сезонный датчик (Весна)
+tile.season_sensor_summer.name=Сезонный датчик (Лето)
+tile.season_sensor_autumn.name=Сезонный датчик (Осень)
+tile.season_sensor_winter.name=Сезонный датчик (Зима)
 item.ss_icon=Иконка SS
 item.season_clock.name=Сезонные часы
 

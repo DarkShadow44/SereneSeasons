@@ -6,10 +6,10 @@ commands.sereneseasons.setseason.disabled=As estações do ano estão desativada
 itemGroup.tabSereneSeasons=Serene Seasons
 
 tile.greenhouse_glass.name=Vidro de estufa
-tile.season_sensor_spring.name=Sensor de estações do ano
-tile.season_sensor_summer.name=Sensor de estações do ano
-tile.season_sensor_autumn.name=Sensor de estações do ano
-tile.season_sensor_winter.name=Sensor de estações do ano
+tile.season_sensor_spring.name=Sensor de estações do ano (Primavera)
+tile.season_sensor_summer.name=Sensor de estações do ano (Verão)
+tile.season_sensor_autumn.name=Sensor de estações do ano (Outono)
+tile.season_sensor_winter.name=Sensor de estações do ano (Inverno)
 item.ss_icon.name=Ícone do SS
 
 item.season_clock.name=Relógio de estações do ano

@@ -6,10 +6,10 @@ commands.sereneseasons.setseason.disabled=Seasons are currently disabled!
 itemGroup.tabSereneSeasons=Serene Seasons
 
 tile.greenhouse_glass.name=Greenhouse Glass
-tile.season_sensor_spring.name=Season Sensor
-tile.season_sensor_summer.name=Season Sensor
-tile.season_sensor_autumn.name=Season Sensor
-tile.season_sensor_winter.name=Season Sensor
+tile.season_sensor_spring.name=Season Sensor (Spring)
+tile.season_sensor_summer.name=Season Sensor (Summer)
+tile.season_sensor_autumn.name=Season Sensor (Autumn)
+tile.season_sensor_winter.name=Season Sensor (Winter)
 item.ss_icon.name=SS Icon
 
 item.season_clock.name=Season Clock
