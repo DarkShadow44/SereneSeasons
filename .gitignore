@@ -17,4 +17,3 @@
 *.ipr
 *.iws
 src/main/resources/META-INF/biomesoplenty_at.cfg
-*.launch
