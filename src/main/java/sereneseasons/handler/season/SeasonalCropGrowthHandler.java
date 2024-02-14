@@ -8,7 +8,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockGrass;
 import net.minecraft.block.BlockReed;
+import net.minecraft.block.IGrowable;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import sereneseasons.api.SSBlocks;
@@ -59,7 +61,7 @@ public class SeasonalCropGrowthHandler
 
         if (FertilityConfig.general_category.seasonal_crops && !isFertile && !isGreenhouseGlassAboveBlock(event.world, event.x, event.y, event.z))
         {
-            if (FertilityConfig.general_category.crops_break && !(plant instanceof BlockGrass) && !(plant instanceof BlockReed))
+            if (FertilityConfig.general_category.crops_break && !(plant instanceof BlockGrass) && !(plant instanceof BlockReed) && (plant instanceof IGrowable || plant instanceof IPlantable))
             {
                 event.world.func_147480_a(event.x, event.y, event.z, true);
             }
