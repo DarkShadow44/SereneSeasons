@@ -7,8 +7,12 @@
  ******************************************************************************/
 package sereneseasons.season;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import javax.annotation.Nullable;
 
+import cpw.mods.fml.common.Loader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
@@ -20,8 +24,8 @@ import net.minecraft.world.biome.BiomeGenBase;
 import sereneseasons.api.season.ISeasonState;
 import sereneseasons.api.season.Season;
 import sereneseasons.api.season.Season.SubSeason;
-import sereneseasons.asm.IBiomeMixin;
 import sereneseasons.api.season.SeasonHelper;
+import sereneseasons.asm.IBiomeMixin;
 import sereneseasons.config.BiomeConfig;
 import sereneseasons.config.SeasonsConfig;
 import sereneseasons.init.ModConfig;
@@ -32,11 +36,45 @@ public class SeasonASMHelper
     // World methods //
     ///////////////////
 
-    // Legacy
-    public static boolean canSnowAtInSeason(World world, int x, int y, int z, boolean checkLight, @Nullable ISeasonState seasonState)
-    {
-        return canSnowAtInSeason(world, x, y, z, checkLight, seasonState, false);
-    }
+	static boolean hasSnowfall;
+	static boolean checkedSnowfall;
+	static Method methodSnowfall;
+
+	private static void runSnowfallHack(World world, int x, int y, int z, boolean checkLight)
+	{
+		if (!checkedSnowfall) {
+			checkedSnowfall = true;
+			hasSnowfall = Loader.isModLoaded("redgear_snowfall");
+			if (hasSnowfall) {
+				Class<?> clazz;
+				try {
+					clazz = Class.forName("redgear.snowfall.asm.SnowfallHooks");
+					methodSnowfall = clazz.getDeclaredMethod("canSnowAtBody", World.class, int.class, int.class, int.class,
+						boolean.class);
+
+				methodSnowfall.setAccessible(true);
+				} catch (ClassNotFoundException | NoSuchMethodException | SecurityException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		if (hasSnowfall)
+		{
+			try {
+				methodSnowfall.invoke(null, world, x, y, z, checkLight);
+			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	// Legacy
+	public static boolean canSnowAtInSeason(World world, int x, int y, int z, boolean checkLight,
+			@Nullable ISeasonState seasonState) {
+		runSnowfallHack(world, x, y, z, checkLight);
+		return canSnowAtInSeason(world, x, y, z, checkLight, seasonState, false);
+	}
 
     public static boolean canSnowAtInSeason(World world, int x, int y, int z, boolean checkLight, @Nullable ISeasonState seasonState, boolean useUnmodifiedTemperature)
     {
