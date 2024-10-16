@@ -87,18 +87,18 @@ public class ColorTransformer implements IClassTransformer
             {
                 methodNode.name = "colorMultiplierOld";
                 changed = true;
-                for (int i = 0; i < methodNode.instructions.size(); i++)
+            for (int i = 0; i < methodNode.instructions.size(); i++)
+            {
+                AbstractInsnNode instruction = methodNode.instructions.get(i);
+                if (instruction.getOpcode() == Opcodes.INVOKESPECIAL)
                 {
-                    AbstractInsnNode instruction = methodNode.instructions.get(i);
-                    if (instruction.getOpcode() == Opcodes.INVOKESPECIAL)
+                    MethodInsnNode superCall = (MethodInsnNode) instruction;
+                    if (superCall.name.equals("colorMultiplier") || superCall.name.equals("func_149720_d") || (superCall.name.equals("d") && superCall.desc.equals("(Lahl;III)I")))
                     {
-                        MethodInsnNode superCall = (MethodInsnNode) instruction;
-                        if (superCall.name.equals("colorMultiplier") || superCall.name.equals("func_149720_d") || (superCall.name.equals("d") && superCall.desc.equals("(Lahl;III)I")))
-                        {
-                            superCall.name = "colorMultiplierOld";
-                        }
+                        superCall.name = "colorMultiplierOld";
                     }
                 }
+            }
             }
         }
 
